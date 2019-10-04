@@ -70,7 +70,7 @@ while True:
 
 			# write the frame to disk
 			p = os.path.sep.join([args["output"],
-				args["input"] + "{}.png".format(saved)])
+				args["input"].split('/')[1] + "{}.png".format(saved)])
 			cv2.imwrite(p, face)
 			saved += 1
 			print("[INFO] saved {} to disk".format(p))
